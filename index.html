@@ -281,7 +281,7 @@
           </div>
           <div>
             <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel">
+            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9+\-\s]{7,15}" maxlength="15" placeholder="e.g. 9876543210" oninput="this.value = this.value.replace(/[^0-9+\-\s]/g, '')">
           </div>
           <div>
             <label for="message">What do you need built?</label>
