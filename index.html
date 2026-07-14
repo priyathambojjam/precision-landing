@@ -281,7 +281,7 @@
           </div>
           <div>
             <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="15" placeholder="e.g. 9876543210" required>
+            <input id="phone" name="phone" type="text" maxlength="15" placeholder="Enter phone number" required>
           </div>
           <div>
             <label for="message">What do you need built?</label>
@@ -319,20 +319,19 @@
   </footer>
 
   <script>
-    // Restrict phone input to numbers, +, -, and spaces only
+    // Restrict phone input to numbers only
     document.getElementById('phone').addEventListener('keypress', function(e) {
       const char = String.fromCharCode(e.which);
-      // Allow only: 0-9, +, -, space
-      if (!/[0-9+\-\s]/.test(char)) {
+      if (!/[0-9]/.test(char)) {
         e.preventDefault();
       }
     });
 
-    // Clean up pasted content
+    // Clean up pasted content - remove all non-numeric characters
     document.getElementById('phone').addEventListener('paste', function(e) {
       e.preventDefault();
       const pastedText = (e.clipboardData || window.clipboardData).getData('text');
-      const cleaned = pastedText.replace(/[^0-9+\-\s]/g, '').slice(0, 15);
+      const cleaned = pastedText.replace(/[^0-9]/g, '').slice(0, 15);
       this.value = cleaned;
     });
   </script>
