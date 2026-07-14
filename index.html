@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       STEP 1: THE <head> IS WHERE SEO LIVES
+       Google reads this section first. Nothing here is visible
+       on the page, but it's the most important part for SEO.
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- The <title> tag: shows up as the blue link in Google results. -->
+  <title>X-Y Rail Systems, Gears &amp; Precision Components Manufacturer | Axenta Precision</title>
+
+  <!-- Meta description: the grey text under the title in Google. -->
+  <meta name="description" content="Axenta Precision manufactures custom X-Y rail systems, gears, cams, and precision components for industrial automation. Get a fast quote today.">
+
+  <!-- Canonical tag: tells Google "this is the master copy of this page" -->
+  <link rel="canonical" href="https://www.axentaprecision.com/">
+
+  <!-- Open Graph tags: control how the page looks when shared -->
+  <meta property="og:title" content="X-Y Rail Systems, Gears &amp; Precision Components | Axenta Precision">
+  <meta property="og:description" content="Custom-engineered rail systems, gears, cams and precision components, built to your tolerances.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.axentaprecision.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Structured data for local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Manufacturer",
+    "name": "Axenta Precision",
+    "description": "Manufacturer of X-Y rail systems, gears, cams, and custom precision components.",
+    "url": "https://www.axentaprecision.com/",
+    "telephone": "+91-00000-00000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 12, Industrial Estate",
+      "addressLocality": "Your City",
+      "addressRegion": "Your State",
+      "postalCode": "000000",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #1D2129;
+      --graphite: #14171C;
+      --steel: #3A6EA5;
+      --amber: #E8973A;
+      --silver: #D5D9DE;
+      --paper: #F6F5F2;
+      --white: #FFFFFF;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --max-width: 1180px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--steel);
+    }
+
+    /* ---------- HEADER ---------- */
+    header { position: sticky; top: 0; background: var(--graphite); color: var(--silver); }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { font-family: var(--font-display); font-weight: 700; color: var(--white); font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+    nav ul { list-style: none; display: flex; gap: 28px; font-size: 0.9rem; }
+    nav a:hover { color: var(--amber); }
+    .btn-quote { background: var(--amber); color: var(--graphite); font-weight: 600; padding: 9px 18px; border-radius: 4px; font-size: 0.85rem; }
+
+    /* ---------- HERO ---------- */
+    .hero { padding: 72px 0 56px; }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 2.9rem); margin: 14px 0 18px; }
+    .hero p.lead { font-size: 1.05rem; color: #444; max-width: 46ch; margin-bottom: 26px; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary { background: var(--steel); color: var(--white); padding: 13px 24px; border-radius: 4px; font-weight: 600; }
+    .btn-secondary { border: 1.5px solid var(--ink); padding: 12px 24px; border-radius: 4px; font-weight: 600; }
+    .spec-strip { display: flex; gap: 28px; margin-top: 38px; font-family: var(--font-mono); font-size: 0.78rem; color: #555; }
+    .spec-strip strong { display: block; font-size: 1.3rem; font-family: var(--font-display); color: var(--graphite); }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 70px 0; }
+    section > .wrap > h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 10px 0 12px; }
+    section > .wrap > p.section-lead { max-width: 60ch; color: #444; margin-bottom: 40px; }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .about-grid li { margin-bottom: 10px; padding-left: 22px; position: relative; }
+    .about-grid li::before { content: "▸"; position: absolute; left: 0; color: var(--steel); }
+
+    /* ---------- PRODUCTS ---------- */
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .product-card { background: var(--white); border: 1px solid #00000014; border-radius: 6px; padding: 22px; }
+    .product-card svg { width: 100%; height: 100px; margin-bottom: 14px; }
+    .product-card h3 { font-size: 1.02rem; margin-bottom: 6px; }
+    .product-card p { font-size: 0.88rem; color: #555; }
+
+    /* ---------- WHY CHOOSE US ---------- */
+    .why-us { background: var(--graphite); color: var(--silver); }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 10px; }
+    .why-card h3 { color: var(--white); font-size: 1rem; margin-bottom: 8px; }
+    .why-card p { font-size: 0.87rem; color: #B7BEC7; }
+    .why-card .num { font-family: var(--font-mono); color: var(--amber); font-size: 0.8rem; }
+
+    /* ---------- CTA BANNER ---------- */
+    .cta-banner { background: var(--steel); color: var(--white); text-align: center; padding: 60px 0; }
+    .cta-banner .btn-primary { background: var(--amber); color: var(--graphite); display: inline-block; margin-top: 18px; }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    form { display: grid; gap: 14px; }
+    label { font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; display: block; }
+    input, textarea { width: 100%; padding: 11px 13px; border: 1px solid #00000022; border-radius: 4px; font-size: 0.92rem; }
+    button[type="submit"] { background: var(--graphite); color: var(--white); padding: 13px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; }
+
+    /* ---------- FOOTER ---------- */
+    footer { background: var(--graphite); color: #9AA2AC; padding: 44px 0 24px; font-size: 0.85rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 30px; }
+    footer h4 { color: var(--white); font-size: 0.85rem; margin-bottom: 12px; }
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 8px; }
+    .footer-bottom { border-top: 1px solid #ffffff1a; padding-top: 18px; text-align: center; font-size: 0.78rem; }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .hero .wrap, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .product-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      .product-grid, .why-grid, .footer-grid { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a href="#" class="logo">AXENTA PRECISION</a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#quote" class="btn-quote">Request a Quote</a>
+    </div>
+  </header>
+
+  <!-- HERO: the only h1 on the page -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Precision Manufacturing · Est. 2009</p>
+        <h1>Custom X-Y Rail Systems, Gears &amp; Cams, Built to Micron Tolerances</h1>
+        <p class="lead">We design and manufacture precision linear motion and gear components for automation, robotics, and machine-tool builders.</p>
+        <div class="cta-row">
+          <a href="#quote" class="btn-primary">Request a Quote</a>
+          <a href="#products" class="btn-secondary">View Products</a>
+        </div>
+        <div class="spec-strip">
+          <div><strong>±2μm</strong>positioning tolerance</div>
+          <div><strong>15+ yrs</strong>manufacturing exp.</div>
+          <div><strong>48hr</strong>quote turnaround</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about">
+    <div class="wrap">
+      <h2>Engineering-first, since day one</h2>
+      <div class="about-grid" style="margin-top:20px">
+        <div>
+          <p>Axenta Precision started as a two-person tool room and grew into a full production facility because we obsessed over one thing: parts that fit right the first time.</p>
+          <ul>
+            <li>In-house CNC machining and grinding</li>
+            <li>Reverse-engineering from sample parts</li>
+            <li>Full dimensional inspection reports on request</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT SHOWCASE -->
+  <section id="products" style="background:var(--white)">
+    <div class="wrap">
+      <h2>What we manufacture</h2>
+      <p class="section-lead">Four product families, all built to your drawings and tolerances.</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>X-Y Rail Systems</h3>
+          <p>Precision linear guides for automation and pick-and-place systems.</p>
+        </div>
+        <div class="product-card">
+          <h3>Gears</h3>
+          <p>Spur, helical, and bevel gears cut to AGMA class specifications.</p>
+        </div>
+        <div class="product-card">
+          <h3>Cams</h3>
+          <p>Custom cam profiles machined to your motion curve.</p>
+        </div>
+        <div class="product-card">
+          <h3>Custom Components</h3>
+          <p>One-off or production-run parts built from your CAD files.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-us" class="why-us">
+    <div class="wrap">
+      <h2 style="color:#fff">Why manufacturers choose Axenta</h2>
+      <div class="why-grid">
+        <div class="why-card"><span class="num">01</span><h3>Tight tolerances</h3><p>±2 micron accuracy on critical dimensions, verified on CMM.</p></div>
+        <div class="why-card"><span class="num">02</span><h3>Fast turnaround</h3><p>Quotes in 48 hours, prototypes in days.</p></div>
+        <div class="why-card"><span class="num">03</span><h3>Material flexibility</h3><p>Steel, aluminum, brass, and engineering plastics.</p></div>
+        <div class="why-card"><span class="num">04</span><h3>Full traceability</h3><p>Every batch documented with material certs and inspection data.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" id="quote">
+    <div class="wrap">
+      <h2>Have a drawing ready? Get a quote in 48 hours.</h2>
+      <p>Send your CAD file or spec sheet — no minimum order quantity.</p>
+      <a href="#contact" class="btn-primary">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" style="background:var(--white)">
+    <div class="wrap">
+      <div class="contact-grid" style="margin-top:20px">
+        <div>
+          <h2>Tell us what you need</h2>
+          <p class="section-lead">Fill in the form and our team will get back within one business day.</p>
+          <p><strong>Phone:</strong> +91 00000 00000<br><strong>Email:</strong> sales@axentaprecision.com</p>
+        </div>
+        <form>
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+          <div>
+            <label for="message">What do you need built?</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit">Send Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>AXENTA PRECISION</h4>
+          <p>Custom X-Y rail systems, gears, cams, and precision components for industrial automation.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#contact">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul><li>X-Y Rail Systems</li><li>Gears</li><li>Cams</li><li>Custom Parts</li></ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul><li>sales@axentaprecision.com</li><li>+91 00000 00000</li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Axenta Precision. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
