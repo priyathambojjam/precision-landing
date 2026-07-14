@@ -281,7 +281,7 @@
           </div>
           <div>
             <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9+\-\s]{7,15}" maxlength="15" placeholder="e.g. 9876543210" oninput="this.value = this.value.replace(/[^0-9+\-\s]/g, '')">
+            <input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="15" placeholder="e.g. 9876543210" required>
           </div>
           <div>
             <label for="message">What do you need built?</label>
@@ -317,6 +317,25 @@
       <div class="footer-bottom">© 2026 chintu limited. All rights reserved.</div>
     </div>
   </footer>
+
+  <script>
+    // Restrict phone input to numbers, +, -, and spaces only
+    document.getElementById('phone').addEventListener('keypress', function(e) {
+      const char = String.fromCharCode(e.which);
+      // Allow only: 0-9, +, -, space
+      if (!/[0-9+\-\s]/.test(char)) {
+        e.preventDefault();
+      }
+    });
+
+    // Clean up pasted content
+    document.getElementById('phone').addEventListener('paste', function(e) {
+      e.preventDefault();
+      const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+      const cleaned = pastedText.replace(/[^0-9+\-\s]/g, '').slice(0, 15);
+      this.value = cleaned;
+    });
+  </script>
 
 </body>
 </html>
